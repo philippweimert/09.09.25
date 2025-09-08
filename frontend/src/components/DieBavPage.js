@@ -603,7 +603,7 @@ const DieBavPage = () => {
           }
 
           .onboarding-label-green {
-            background: linear-gradient(135deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+            background: #059669;
             color: #ffffff;
             padding: 8px 16px;
             border-radius: 20px;
@@ -611,14 +611,14 @@ const DieBavPage = () => {
             font-weight: 700;
             display: inline-block;
             font-family: 'Tenor Sans', serif;
-            box-shadow: 0 3px 10px rgba(34, 197, 94, 0.3);
+            box-shadow: 0 3px 10px rgba(5, 150, 105, 0.4);
             transition: all 0.3s ease;
           }
 
           .onboarding-card-green:hover .onboarding-label-green {
             transform: scale(1.05);
-            box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
-            background: linear-gradient(135deg, #6ee7b7 0%, #4ade80 50%, #22c55e 100%);
+            box-shadow: 0 6px 16px rgba(5, 150, 105, 0.5);
+            background: #047857;
           }
 
           /* Video Overlay Card Styles */

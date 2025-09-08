@@ -241,8 +241,8 @@ const DieBavPage = () => {
               <div className="onboarding-card-green relative overflow-hidden p-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-400/20 rounded-full flex items-center justify-center">
-                      <CheckCircle className="w-4 h-4 text-green-300" />
+                    <div className="w-8 h-8 bg-emerald-600/20 rounded-full flex items-center justify-center">
+                      <CheckCircle className="w-4 h-4 text-emerald-500" />
                     </div>
                     
                     <div>

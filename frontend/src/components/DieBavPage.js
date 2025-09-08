@@ -503,8 +503,8 @@ const DieBavPage = () => {
           }
 
           .challenges-solutions-header {
-            background: linear-gradient(135deg, #f8dcbf 0%, #e8ccaf 50%, #d8bcaf 100%);
-            color: #1e3a5f;
+            background: rgba(30, 58, 95, 0.85);
+            color: white;
             padding: 20px 30px;
             border-radius: 30px 30px 0 0;
             font-size: 1.5em;

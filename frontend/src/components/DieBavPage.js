@@ -237,28 +237,22 @@ const DieBavPage = () => {
                 )}
               </div>
               
-              {/* Onboarding Card - Glassmorphism Style */}
-              <div className="onboarding-card relative overflow-hidden p-6">
+              {/* Onboarding Card - Green Glassmorphism Style */}
+              <div className="onboarding-card-green relative overflow-hidden p-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-green-400/20 rounded-full flex items-center justify-center">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-300" />
                     </div>
                     
                     <div>
-                      <div className="onboarding-label">
-                        <span className="text-green-400">0,00 €</span> Onboarding
+                      <div className="onboarding-label-green">
+                        <span className="text-green-300">0,00 €</span> Onboarding
                       </div>
                       <p className="text-sm text-acencia-blue">
                         Bis zum <span className="font-medium text-white">01.01.2027</span>
                       </p>
                     </div>
-                  </div>
-                  
-                  <div className="text-right">
-                    <p className="text-xs text-acencia-blue uppercase tracking-wide font-medium">
-                      Kostenfrei
-                    </p>
                   </div>
                 </div>
               </div>

@@ -103,13 +103,13 @@ const BkvPage = () => {
 
             {/* Right Column - 5/12 */}
             <div className="lg:col-span-5">
-              {/* Coming Soon Card */}
-              <div className="bg-white border border-gray-100 rounded-lg p-8 text-center">
+              {/* Coming Soon Card - Glassmorphism Style */}
+              <div className="coming-soon-card p-8 text-center relative overflow-hidden">
                 <Activity className="w-16 h-16 text-acencia-orange mx-auto mb-6" />
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4 font-heading">
+                <div className="coming-soon-label mb-4">
                   Coming Soon
-                </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                </div>
+                <p className="text-acencia-blue mb-6 leading-relaxed">
                   Wir arbeiten intensiv an unserer digitalen bKV-Lösung. Lassen Sie sich kostenfrei beraten und erfahren Sie als Erster von unserem Launch.
                 </p>
                 <button 

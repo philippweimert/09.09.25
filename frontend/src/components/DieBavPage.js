@@ -742,32 +742,32 @@ const DieBavPage = () => {
               <div className={`challenges-solutions-content ${isChallengesExpanded ? 'expanded' : ''}`}>
                 {isChallengesExpanded && (
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    {/* Challenges */}
+                    {/* Without ACENCIA */}
                     <div>
-                      <h3 className="text-xl font-semibold text-red-400 mb-6 font-heading">Herausforderungen</h3>
+                      <h3 className="text-xl font-semibold text-red-400 mb-6 font-heading">❌ Ohne ACENCIA</h3>
                       <div className="space-y-4">
-                        {challenges.map((challenge, index) => (
+                        {withoutAcencia.map((item, index) => (
                           <div key={index} className="challenge-item">
                             <AlertTriangle className="challenge-icon" />
                             <div>
-                              <h4 className="font-medium text-white font-heading">{challenge.title}</h4>
-                              <p className="text-acencia-blue text-sm">{challenge.description}</p>
+                              <h4 className="font-medium text-white font-heading">{item.title}</h4>
+                              <p className="text-acencia-blue text-sm">{item.description}</p>
                             </div>
                           </div>
                         ))}
                       </div>
                     </div>
 
-                    {/* Solutions */}
+                    {/* With ACENCIA */}
                     <div>
-                      <h3 className="text-xl font-semibold text-green-400 mb-6 font-heading">Unsere Lösungen</h3>
+                      <h3 className="text-xl font-semibold text-green-400 mb-6 font-heading">✅ Mit ACENCIA</h3>
                       <div className="space-y-4">
-                        {solutions.map((solution, index) => (
+                        {withAcencia.map((item, index) => (
                           <div key={index} className="solution-item">
                             <CheckCircle className="solution-icon" />
                             <div>
-                              <h4 className="font-medium text-white font-heading">{solution.title}</h4>
-                              <p className="text-acencia-blue text-sm">{solution.description}</p>
+                              <h4 className="font-medium text-white font-heading">{item.title}</h4>
+                              <p className="text-acencia-blue text-sm">{item.description}</p>
                             </div>
                           </div>
                         ))}

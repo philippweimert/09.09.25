@@ -84,41 +84,49 @@ const DieBavPage = () => {
     }
   }, [autoplay]);
 
-  const challenges = [
+  const withoutAcencia = [
     {
-      title: "Komplexe Verwaltung",
-      description: "bAV-Verwaltung ist administrativ sehr komplex und fehleranfällig"
+      title: "Manuelle bAV-Verwaltung",
+      description: "Zeitaufwändige Papierarbeit und fehleranfällige Excel-Listen"
     },
     {
-      title: "Zeitaufwand", 
-      description: "Manuelle Prozesse binden wertvolle HR-Ressourcen"
+      title: "HR-Überlastung", 
+      description: "Wertvolle HR-Zeit wird für repetitive Verwaltungsaufgaben verschwendet"
     },
     {
-      title: "Rechtsunsicherheit",
-      description: "Ständige Gesetzesänderungen erfordern permanente Überwachung"
+      title: "Compliance-Risiken",
+      description: "Schwierige Erfüllung von Arbeitgeberpflichten und Rechtsunsicherheit"
     },
     {
       title: "Systembrüche",
-      description: "Fehlende Integration führt zu Medienbrüchen und Doppelerfassung"
+      description: "Keine Schnittstellen zu HR-Systemen führen zu Doppelarbeit"
+    },
+    {
+      title: "Kommunikationslücken",
+      description: "Mitarbeiter sind schlecht über ihre bAV-Optionen informiert"
     }
   ];
 
-  const solutions = [
+  const withAcencia = [
     {
-      title: "Digitale Automatisierung",
-      description: "Vollautomatisierte Abwicklung eliminiert Fehlerquellen"
+      title: "Vollautomatisierte bAV-Verwaltung",
+      description: "Digitale Prozesse eliminieren Fehlerquellen und sparen bis zu 80% Zeit"
     },
     {
-      title: "HR-Entlastung",
-      description: "Bis zu 80% Zeitersparnis durch intelligente Automatisierung" 
+      title: "HR-Entlastung durch Automation", 
+      description: "Ihre HR-Teams fokussieren sich auf strategische Aufgaben statt Administration"
     },
     {
-      title: "Compliance-Sicherheit",
-      description: "Immer aktuell und rechtssicher durch permanente Updates"
+      title: "Automatische Compliance-Erfüllung",
+      description: "Alle Arbeitgeberpflichten werden ohne zusätzlichen Aufwand gewährleistet"
     },
     {
-      title: "Nahtlose Integration", 
-      description: "Durchgängiger Datenfluss in bestehende HR-Systeme"
+      title: "Direkte HR-System-Integration", 
+      description: "Nahtlose Anbindung an bestehende HR-Systeme für maximale Effizienz"
+    },
+    {
+      title: "Proaktive Mitarbeiterkommunikation",
+      description: "Moderne Beratungstools und digitale Information für optimale Aufklärung"
     }
   ];
 

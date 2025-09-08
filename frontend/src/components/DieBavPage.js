@@ -202,8 +202,8 @@ const DieBavPage = () => {
                     
                     {showVideoOverlay && (
                       <div className="absolute inset-0 bg-black/80 flex items-center justify-center">
-                        <div className="bg-white rounded-lg p-6 text-center max-w-xs">
-                          <h3 className="font-semibold text-gray-900 mb-4 font-heading">Video beendet</h3>
+                        <div className="video-overlay-card p-6 text-center max-w-xs">
+                          <div className="video-overlay-label mb-4">Video beendet</div>
                           <div className="space-y-3">
                             <Button 
                               className="w-full bg-acencia-orange hover:bg-acencia-orange/90 text-white px-4 py-2 rounded-lg font-medium"
@@ -217,7 +217,7 @@ const DieBavPage = () => {
                               Erneut ansehen
                             </Button>
                             <Button 
-                              className="w-full border border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 px-4 py-2 rounded-lg font-medium"
+                              className="w-full border border-acencia-blue/30 hover:border-acencia-blue/50 text-acencia-blue hover:text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
                               onClick={() => window.location.href = '/gesetzliche-pflichten'}
                             >
                               Gesetzliche Pflichten - bAV

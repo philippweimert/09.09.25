@@ -472,7 +472,7 @@ const DieBavPage = () => {
       {/* Comparison Section - Always Expanded */}
       <section className="bg-acencia py-16 md:py-20">
         <style dangerouslySetInnerHTML={{ __html: `
-          .challenges-solutions-card {
+          .comparison-card {
             background: rgba(30, 58, 95, 0.85);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -480,10 +480,9 @@ const DieBavPage = () => {
             position: relative;
             overflow: hidden;
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
           }
 
-          .challenges-solutions-card::before {
+          .comparison-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -494,11 +493,11 @@ const DieBavPage = () => {
             transition: left 0.6s ease;
           }
 
-          .challenges-solutions-card:hover::before {
+          .comparison-card:hover::before {
             left: 100%;
           }
 
-          .challenges-solutions-card:hover {
+          .comparison-card:hover {
             background: rgba(30, 58, 95, 0.9);
             box-shadow: 
               0 25px 50px rgba(30, 58, 95, 0.4),
@@ -506,54 +505,8 @@ const DieBavPage = () => {
             border-color: rgba(100, 181, 246, 0.3);
           }
 
-          .challenges-solutions-header {
-            background: rgba(30, 58, 95, 0.85);
-            color: white;
-            padding: 20px 30px;
-            border-radius: 30px 30px 0 0;
-            font-size: 1.5em;
-            font-weight: 700;
-            text-align: center;
-            font-family: 'Tenor Sans', serif;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-          }
-
-          .challenges-solutions-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s ease;
-          }
-
-          .challenges-solutions-card:hover .challenges-solutions-header::before {
-            left: 100%;
-          }
-
-          .challenges-solutions-card:hover .challenges-solutions-header {
-            transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            background: rgba(30, 58, 95, 0.95);
-          }
-
-          .challenges-solutions-content {
-            padding: 30px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-          }
-
-          .challenges-solutions-content.expanded {
-            max-height: 1000px;
+          .comparison-content {
+            padding: 40px;
           }
 
           .challenge-item, .solution-item {

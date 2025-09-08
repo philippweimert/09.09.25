@@ -269,6 +269,130 @@ const DieBavPage = () => {
 
       {/* bAV Process Section */}
       <section className="bg-acencia py-16 md:py-20 relative overflow-hidden">
+        <style dangerouslySetInnerHTML={{ __html: `
+          .process-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: slideInUp 0.8s ease-out;
+            animation-fill-mode: both;
+          }
+
+          .process-card:nth-child(1) { animation-delay: 0.2s; }
+          .process-card:nth-child(3) { animation-delay: 0.4s; }
+          .process-card:nth-child(5) { animation-delay: 0.6s; }
+
+          @keyframes slideInUp {
+            0% {
+              opacity: 0;
+              transform: translateY(60px) scale(0.9);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0) scale(1);
+            }
+          }
+
+          .process-card-body {
+            background: rgba(30, 58, 95, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            width: 320px;
+            height: 160px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 25px;
+            position: relative;
+            z-index: 50;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            overflow: hidden;
+          }
+
+          .process-card-body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.6s ease;
+          }
+
+          .process-card:hover .process-card-body::before {
+            left: 100%;
+          }
+
+          .process-card:hover .process-card-body {
+            transform: translateY(-15px) scale(1.03);
+            background: rgba(30, 58, 95, 0.9);
+            box-shadow: 
+              0 25px 50px rgba(30, 58, 95, 0.4),
+              0 0 30px rgba(100, 181, 246, 0.2);
+            border-color: rgba(100, 181, 246, 0.3);
+          }
+
+          .process-card-label {
+            background: linear-gradient(135deg, #f8dcbf 0%, #e8ccaf 50%, #d8bcaf 100%);
+            color: #1e3a5f;
+            padding: 18px 30px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 15px;
+            font-family: 'Tenor Sans', serif;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            line-height: 1.3;
+          }
+
+          .process-card-label::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+          }
+
+          .process-card:hover .process-card-label::before {
+            left: 100%;
+          }
+
+          .process-card:hover .process-card-label {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #ffecd2 0%, #f8dcbf 50%, #e8ccaf 100%);
+          }
+
+          @media (max-width: 1024px) {
+            .process-card-body {
+              width: 280px;
+              height: 140px;
+            }
+          }
+
+          @media (max-width: 768px) {
+            .process-card-body {
+              width: 300px;
+              height: 120px;
+              padding: 20px;
+            }
+
+            .process-card-label {
+              font-size: 1rem;
+              padding: 15px 25px;
+            }
+          }
+        `}} />
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 relative z-10">
           
           {/* Section Title */}

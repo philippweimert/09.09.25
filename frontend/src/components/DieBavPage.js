@@ -604,39 +604,41 @@ const DieBavPage = () => {
               </div>
               
               <div className={`challenges-solutions-content ${isChallengesExpanded ? 'expanded' : ''}`}>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                  {/* Challenges */}
-                  <div>
-                    <h3 className="text-xl font-semibold text-red-400 mb-6 font-heading">Herausforderungen</h3>
-                    <div className="space-y-4">
-                      {challenges.map((challenge, index) => (
-                        <div key={index} className="challenge-item">
-                          <AlertTriangle className="challenge-icon" />
-                          <div>
-                            <h4 className="font-medium text-white font-heading">{challenge.title}</h4>
-                            <p className="text-acencia-blue text-sm">{challenge.description}</p>
+                {isChallengesExpanded && (
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    {/* Challenges */}
+                    <div>
+                      <h3 className="text-xl font-semibold text-red-400 mb-6 font-heading">Herausforderungen</h3>
+                      <div className="space-y-4">
+                        {challenges.map((challenge, index) => (
+                          <div key={index} className="challenge-item">
+                            <AlertTriangle className="challenge-icon" />
+                            <div>
+                              <h4 className="font-medium text-white font-heading">{challenge.title}</h4>
+                              <p className="text-acencia-blue text-sm">{challenge.description}</p>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Solutions */}
-                  <div>
-                    <h3 className="text-xl font-semibold text-green-400 mb-6 font-heading">Unsere Lösungen</h3>
-                    <div className="space-y-4">
-                      {solutions.map((solution, index) => (
-                        <div key={index} className="solution-item">
-                          <CheckCircle className="solution-icon" />
-                          <div>
-                            <h4 className="font-medium text-white font-heading">{solution.title}</h4>
-                            <p className="text-acencia-blue text-sm">{solution.description}</p>
+                    {/* Solutions */}
+                    <div>
+                      <h3 className="text-xl font-semibold text-green-400 mb-6 font-heading">Unsere Lösungen</h3>
+                      <div className="space-y-4">
+                        {solutions.map((solution, index) => (
+                          <div key={index} className="solution-item">
+                            <CheckCircle className="solution-icon" />
+                            <div>
+                              <h4 className="font-medium text-white font-heading">{solution.title}</h4>
+                              <p className="text-acencia-blue text-sm">{solution.description}</p>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>

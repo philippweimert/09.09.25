@@ -7,8 +7,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isBavDropdownOpen, setIsBavDropdownOpen] = useState(false);
-  const [isBkvDropdownOpen, setIsBkvDropdownOpen] = useState(false);
-  const [isBuvDropdownOpen, setIsBuvDropdownOpen] = useState(false);
+
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
 
   useEffect(() => {

@@ -731,7 +731,7 @@ const DieBavPage = () => {
               onClick={() => setIsChallengesExpanded(!isChallengesExpanded)}
             >
               <div className="challenges-solutions-header">
-                <span>Herausforderungen & Unsere Lösungen</span>
+                <span>Ohne ACENCIA vs. Mit ACENCIA</span>
                 {isChallengesExpanded ? (
                   <ChevronUp className="w-6 h-6" />
                 ) : (

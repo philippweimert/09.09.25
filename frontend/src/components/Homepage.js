@@ -236,28 +236,22 @@ const Homepage = () => {
                   </div>
                 </div>
 
-                {/* Professional Onboarding Card - White Card */}
-                <div className="bg-white border border-gray-100 rounded-lg p-4">
+                {/* Professional Onboarding Card - Green Glassmorphism */}
+                <div className="onboarding-card-green relative overflow-hidden p-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                        <CheckCircle className="w-4 h-4 text-green-600" />
+                      <div className="w-8 h-8 bg-green-400/20 rounded-full flex items-center justify-center">
+                        <CheckCircle className="w-4 h-4 text-green-300" />
                       </div>
                       
                       <div>
-                        <h3 className="text-base font-semibold text-gray-900 font-heading">
-                          <span className="text-green-600">0,00 €</span> Onboarding
-                        </h3>
-                        <p className="text-sm text-gray-600">
-                          Bis zum <span className="font-medium">01.01.2027</span>
+                        <div className="onboarding-label-green">
+                          <span className="text-green-300">0,00 €</span> Onboarding
+                        </div>
+                        <p className="text-sm text-acencia-blue">
+                          Bis zum <span className="font-medium text-white">01.01.2027</span>
                         </p>
                       </div>
-                    </div>
-                    
-                    <div className="text-right">
-                      <p className="text-xs text-gray-500 uppercase tracking-wide font-medium">
-                        Kostenfrei
-                      </p>
                     </div>
                   </div>
                 </div>

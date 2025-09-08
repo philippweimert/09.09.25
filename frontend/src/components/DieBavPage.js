@@ -465,8 +465,127 @@ const DieBavPage = () => {
         </div>
       </section>
 
-      {/* Challenges & Solutions Section */}
+      {/* Challenges & Solutions Section - Collapsible */}
       <section className="bg-acencia py-16 md:py-20">
+        <style dangerouslySetInnerHTML={{ __html: `
+          .challenges-solutions-card {
+            background: rgba(30, 58, 95, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+          }
+
+          .challenges-solutions-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.6s ease;
+          }
+
+          .challenges-solutions-card:hover::before {
+            left: 100%;
+          }
+
+          .challenges-solutions-card:hover {
+            background: rgba(30, 58, 95, 0.9);
+            box-shadow: 
+              0 25px 50px rgba(30, 58, 95, 0.4),
+              0 0 30px rgba(100, 181, 246, 0.2);
+            border-color: rgba(100, 181, 246, 0.3);
+          }
+
+          .challenges-solutions-header {
+            background: linear-gradient(135deg, #f8dcbf 0%, #e8ccaf 50%, #d8bcaf 100%);
+            color: #1e3a5f;
+            padding: 20px 30px;
+            border-radius: 30px 30px 0 0;
+            font-size: 1.5em;
+            font-weight: 700;
+            text-align: center;
+            font-family: 'Tenor Sans', serif;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+
+          .challenges-solutions-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+          }
+
+          .challenges-solutions-card:hover .challenges-solutions-header::before {
+            left: 100%;
+          }
+
+          .challenges-solutions-card:hover .challenges-solutions-header {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #ffecd2 0%, #f8dcbf 50%, #e8ccaf 100%);
+          }
+
+          .challenges-solutions-content {
+            padding: 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+          }
+
+          .challenges-solutions-content.expanded {
+            max-height: 1000px;
+          }
+
+          .challenge-item, .solution-item {
+            display: flex;
+            align-items: start;
+            space-x: 12px;
+            margin-bottom: 16px;
+          }
+
+          .challenge-icon, .solution-icon {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            flex-shrink: 0;
+            margin-right: 12px;
+          }
+
+          .challenge-icon {
+            color: #ef4444;
+          }
+
+          .solution-icon {
+            color: #10b981;
+          }
+
+          @media (max-width: 768px) {
+            .challenges-solutions-header {
+              font-size: 1.2em;
+              padding: 16px 20px;
+            }
+            
+            .challenges-solutions-content {
+              padding: 20px;
+            }
+          }
+        `}} />
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6 tracking-tight leading-tight font-heading">
@@ -477,39 +596,54 @@ const DieBavPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Challenges */}
-            <div>
-              <div className="bg-white rounded-lg p-8">
-                <h3 className="text-2xl font-semibold text-red-600 mb-6 font-heading">Herausforderungen</h3>
-                <div className="space-y-4">
-                  {challenges.map((challenge, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-medium text-gray-900 font-heading">{challenge.title}</h4>
-                        <p className="text-gray-600 text-sm">{challenge.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+          {/* Single Collapsible Card */}
+          <div className="max-w-4xl mx-auto">
+            <div 
+              className="challenges-solutions-card"
+              onClick={() => setIsChallengesExpanded(!isChallengesExpanded)}
+            >
+              <div className="challenges-solutions-header">
+                <span>Herausforderungen & Unsere Lösungen</span>
+                {isChallengesExpanded ? (
+                  <ChevronUp className="w-6 h-6" />
+                ) : (
+                  <ChevronDown className="w-6 h-6" />
+                )}
               </div>
-            </div>
-
-            {/* Solutions */}
-            <div>
-              <div className="bg-white rounded-lg p-8">
-                <h3 className="text-2xl font-semibold text-green-600 mb-6 font-heading">Unsere Lösungen</h3>
-                <div className="space-y-4">
-                  {solutions.map((solution, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-medium text-gray-900 font-heading">{solution.title}</h4>
-                        <p className="text-gray-600 text-sm">{solution.description}</p>
-                      </div>
+              
+              <div className={`challenges-solutions-content ${isChallengesExpanded ? 'expanded' : ''}`}>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                  {/* Challenges */}
+                  <div>
+                    <h3 className="text-xl font-semibold text-red-400 mb-6 font-heading">Herausforderungen</h3>
+                    <div className="space-y-4">
+                      {challenges.map((challenge, index) => (
+                        <div key={index} className="challenge-item">
+                          <AlertTriangle className="challenge-icon" />
+                          <div>
+                            <h4 className="font-medium text-white font-heading">{challenge.title}</h4>
+                            <p className="text-acencia-blue text-sm">{challenge.description}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
+
+                  {/* Solutions */}
+                  <div>
+                    <h3 className="text-xl font-semibold text-green-400 mb-6 font-heading">Unsere Lösungen</h3>
+                    <div className="space-y-4">
+                      {solutions.map((solution, index) => (
+                        <div key={index} className="solution-item">
+                          <CheckCircle className="solution-icon" />
+                          <div>
+                            <h4 className="font-medium text-white font-heading">{solution.title}</h4>
+                            <p className="text-acencia-blue text-sm">{solution.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

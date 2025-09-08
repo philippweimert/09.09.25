@@ -456,7 +456,7 @@ const DieBavPage = () => {
                 Wir begeistern Ihre Mitarbeitenden
               </h4>
               <p className="text-acencia-blue text-sm leading-relaxed">
-                Wir unterstützen Sie bei der bAV-Kommunikation an Ihre Mitarbeitenden durch moderne Informationsmaßnahmen. Auf Wunsch beraten wir jeden Mitarbeitenden zu seiner optimalen Vorsorgelösung - digital oder vor Ort.
+                Moderne bAV-Kommunikation für Mitarbeitende – inklusive individueller Beratung, digital oder vor Ort.
               </p>
             </div>
 

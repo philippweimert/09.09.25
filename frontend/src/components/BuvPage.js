@@ -221,14 +221,75 @@ const BuvPage = () => {
 
 
 
-      {/* CTA Section */}
+      {/* CTA Section - Glassmorphism Style */}
       <section className="bg-acencia py-16 md:py-20">
+        <style dangerouslySetInnerHTML={{ __html: `
+          .cta-card {
+            background: rgba(30, 58, 95, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+
+          .cta-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.6s ease;
+          }
+
+          .cta-card:hover::before {
+            left: 100%;
+          }
+
+          .cta-card:hover {
+            background: rgba(30, 58, 95, 0.9);
+            box-shadow: 
+              0 25px 50px rgba(30, 58, 95, 0.4),
+              0 0 30px rgba(100, 181, 246, 0.2);
+            border-color: rgba(100, 181, 246, 0.3);
+          }
+
+          .cta-label {
+            background: linear-gradient(135deg, #f8dcbf 0%, #e8ccaf 50%, #d8bcaf 100%);
+            color: #1e3a5f;
+            padding: 16px 32px;
+            border-radius: 25px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: inline-block;
+            font-family: 'Tenor Sans', serif;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 24px;
+          }
+
+          .cta-card:hover .cta-label {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #ffecd2 0%, #f8dcbf 50%, #e8ccaf 100%);
+          }
+
+          @media (max-width: 768px) {
+            .cta-label {
+              font-size: 1.25rem;
+              padding: 12px 24px;
+            }
+          }
+        `}} />
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="bg-white rounded-lg p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6 font-heading">
+          <div className="cta-card p-12 text-center">
+            <div className="cta-label">
               Interessiert an unserer bUV-Lösung?
-            </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            </div>
+            <p className="text-lg text-acencia-blue mb-8 max-w-2xl mx-auto">
               Kontaktieren Sie uns für eine unverbindliche Beratung zur betrieblichen Unfallversicherung.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -241,7 +302,7 @@ const BuvPage = () => {
               </button>
               <Link
                 to="/kontakt"
-                className="border border-gray-300 hover:border-gray-400 text-gray-700 hover:text-gray-900 px-8 py-4 rounded-lg font-medium text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="border border-acencia-blue/30 hover:border-acencia-blue/50 text-acencia-blue hover:text-white px-8 py-4 rounded-lg font-medium text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <span>Kontakt aufnehmen</span>
               </Link>

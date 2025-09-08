@@ -79,7 +79,7 @@ const Header = () => {
             
             <Link 
               to="/buv" 
-              className="text-acentia-blue hover:text-white font-medium text-sm transition-colors duration-200 py-2"
+              className="text-acencia-blue hover:text-white font-medium text-sm transition-colors duration-200 py-2"
             >
               bUV
             </Link>

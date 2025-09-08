@@ -190,27 +190,27 @@ const BuvPage = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg p-8">
+            <div className="statistics-card p-8 relative overflow-hidden">
               <div className="text-center">
                 <AlertTriangle className="w-16 h-16 text-acencia-orange mx-auto mb-6" />
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4 font-heading">
+                <div className="statistics-label mb-4">
                   Unfallstatistiken
-                </h3>
+                </div>
                 <div className="space-y-4 text-left">
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Arbeitsunfälle pro Jahr</span>
-                    <span className="font-semibold text-gray-900">871.000</span>
+                    <span className="text-acencia-blue">Arbeitsunfälle pro Jahr</span>
+                    <span className="font-semibold text-white">871.000</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Wegeunfälle</span>
-                    <span className="font-semibold text-gray-900">186.000</span>
+                    <span className="text-acencia-blue">Wegeunfälle</span>
+                    <span className="font-semibold text-white">186.000</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Berufskrankheiten</span>
-                    <span className="font-semibold text-gray-900">73.000</span>
+                    <span className="text-acencia-blue">Berufskrankheiten</span>
+                    <span className="font-semibold text-white">73.000</span>
                   </div>
                 </div>
-                <p className="text-sm text-gray-500 mt-6">
+                <p className="text-sm text-acencia-blue/70 mt-6">
                   Quelle: Deutsche Gesetzliche Unfallversicherung (DGUV)
                 </p>
               </div>

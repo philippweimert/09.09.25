@@ -815,6 +815,12 @@ const DieBavPage = () => {
         </div>
       </section>
 
+      {/* Für jede Unternehmensgröße Sektion */}
+      <CustomerSegments />
+      
+      {/* Google Bewertungen Section */}
+      <GoogleReviews />
+
       <Footer />
     </div>
   );

@@ -469,7 +469,7 @@ const DieBavPage = () => {
         </div>
       </section>
 
-      {/* Challenges & Solutions Section - Collapsible */}
+      {/* Comparison Section - Always Expanded */}
       <section className="bg-acencia py-16 md:py-20">
         <style dangerouslySetInnerHTML={{ __html: `
           .challenges-solutions-card {

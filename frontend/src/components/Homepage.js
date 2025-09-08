@@ -299,7 +299,7 @@ const Homepage = () => {
                       
                       <div>
                         <div className="onboarding-label-green">
-                          <span className="text-green-300">0,00 €</span> Onboarding
+                          <span className="text-white font-bold">0,00 €</span> Onboarding
                         </div>
                         <p className="text-sm text-acencia-blue">
                           Bis zum <span className="font-medium text-white">01.01.2027</span>

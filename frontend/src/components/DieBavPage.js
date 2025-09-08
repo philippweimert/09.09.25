@@ -513,7 +513,7 @@ const DieBavPage = () => {
             display: flex;
             align-items: start;
             space-x: 12px;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
           }
 
           .challenge-icon, .solution-icon {

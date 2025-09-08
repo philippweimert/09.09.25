@@ -8,7 +8,7 @@ import { Button } from "./ui/button";
 import { Shield, Users, TrendingUp, ArrowRight, Building2, AlertTriangle, CheckCircle, ChevronDown, ChevronUp, Play } from "lucide-react";
 
 const DieBavPage = () => {
-  const [isChallengesExpanded, setIsChallengesExpanded] = useState(false);
+
   const location = useLocation();
   const [autoplay, setAutoplay] = useState(false);
   const [showVideoOverlay, setShowVideoOverlay] = useState(false);

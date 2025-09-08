@@ -219,60 +219,7 @@ const BuvPage = () => {
         </div>
       </section>
 
-      {/* More Information Section */}
-      <section className="bg-acencia py-16 md:py-20">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6 tracking-tight leading-tight font-heading">
-              Mehr zur betrieblichen Unfallversicherung
-            </h2>
-            <p className="text-lg text-acencia-blue max-w-2xl mx-auto leading-relaxed">
-              Erfahren Sie alles Wichtige über die bUV für Ihr Unternehmen
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link 
-              to="/buv/x"
-              className="group bg-white border border-gray-100 rounded-lg p-8 hover:bg-gray-50 hover:shadow-sm transition-all duration-150 ease-out"
-            >
-              <div className="w-14 h-14 bg-gradient-to-br from-acencia-orange/10 to-acencia-orange/20 rounded-xl flex items-center justify-center mb-6 group-hover:from-acencia-orange/20 group-hover:to-acencia-orange/30 transition-all duration-150">
-                <Building2 className="w-6 h-6 text-acencia-orange" />
-              </div>
-              
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 font-heading">
-                Für Unternehmen
-              </h3>
-              <p className="text-gray-600 text-base leading-relaxed mb-6">
-                Alles Wichtige über die Vorteile, Leistungen und Umsetzung der bUV für Arbeitgeber.
-              </p>
-              
-              <div className="flex items-center space-x-2 text-acencia-orange group-hover:text-acencia-orange/80 transition-colors duration-150">
-                <span className="font-medium text-sm">Mehr erfahren</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-150" />
-              </div>
-            </Link>
-
-            <div className="bg-white border border-gray-100 rounded-lg p-8">
-              <div className="w-14 h-14 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center mb-6">
-                <Clock className="w-6 h-6 text-gray-400" />
-              </div>
-              
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 font-heading">
-                Für Arbeitnehmer
-              </h3>
-              <p className="text-gray-600 text-base leading-relaxed mb-6">
-                Informationen für Mitarbeiter folgen in Kürze. Lassen Sie sich über Updates informieren.
-              </p>
-              
-              <div className="flex items-center space-x-2 text-gray-400">
-                <span className="font-medium text-sm">Coming Soon</span>
-                <Clock className="w-4 h-4" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="bg-acencia py-16 md:py-20">

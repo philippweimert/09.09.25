@@ -416,7 +416,7 @@ const DieBavPage = () => {
                 Wir geben Sicherheit
               </h4>
               <p className="text-acencia-blue text-sm leading-relaxed">
-                Unter Berücksichtigung aller rechtlichen Aspekte ermitteln wir unabhängig das optimale Vorsorgemodell für Unternehmen und Mitarbeitende - individuell zugeschnitten mit innovativen Produktoptionen.
+                Individuelle Vorsorgelösungen für Unternehmen und Mitarbeitende – rechtssicher, unabhängig und mit innovativen Optionen.
               </p>
             </div>
 

@@ -126,23 +126,110 @@ const Homepage = () => {
                   </div>
                 </div>
                 
-                {/* Solutions Cards - Professional White Cards */}
+                {/* Solutions Cards - New Animated Design */}
                 <div>
+                  <style dangerouslySetInnerHTML={{ __html: `
+                    .insurance-card {
+                      background: rgba(30, 58, 95, 0.85);
+                      backdrop-filter: blur(20px);
+                      border: 1px solid rgba(255, 255, 255, 0.2);
+                      border-radius: 16px;
+                      padding: 1.5rem;
+                      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                      cursor: pointer;
+                      position: relative;
+                      overflow: hidden;
+                      height: 120px;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                    }
+
+                    .insurance-card::before {
+                      content: '';
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      right: 0;
+                      bottom: 0;
+                      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+                      opacity: 0;
+                      transition: opacity 0.4s ease;
+                    }
+
+                    .insurance-card:hover {
+                      background: rgba(30, 58, 95, 0.9);
+                      border-color: rgba(255, 255, 255, 0.3);
+                      transform: translateY(-8px);
+                      box-shadow: 0 20px 40px rgba(30, 58, 95, 0.25);
+                    }
+
+                    .insurance-card:hover::before {
+                      opacity: 1;
+                    }
+
+                    .card-type {
+                      background: linear-gradient(135deg, #f8dcbf 0%, #e8ccaf 50%, #d8bcaf 100%);
+                      color: #1e3a5f;
+                      font-size: 1rem;
+                      font-weight: 600;
+                      padding: 0.5rem 1rem;
+                      border-radius: 12px;
+                      display: inline-block;
+                      margin-bottom: 0.5rem;
+                      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                      transition: all 0.3s ease;
+                      letter-spacing: -0.01em;
+                    }
+
+                    .insurance-card:hover .card-type {
+                      transform: scale(1.05);
+                      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+                    }
+
+                    .card-description {
+                      color: rgba(255, 255, 255, 0.9);
+                      font-size: 0.75rem;
+                      line-height: 1.4;
+                      font-weight: 400;
+                      transition: color 0.3s ease;
+                      text-align: center;
+                    }
+
+                    .insurance-card:hover .card-description {
+                      color: rgba(255, 255, 255, 1);
+                    }
+
+                    @media (max-width: 768px) {
+                      .insurance-card {
+                        padding: 1rem;
+                        height: 100px;
+                      }
+                      
+                      .card-type {
+                        font-size: 0.9rem;
+                        padding: 0.4rem 0.8rem;
+                      }
+                      
+                      .card-description {
+                        font-size: 0.7rem;
+                      }
+                    }
+                  `}} />
                   <h3 className="text-lg font-semibold text-white mb-4 font-heading">Unsere Lösungen</h3>
                   <div className="grid grid-cols-3 gap-3">
                     {expertiseAreas.map((area, index) => (
                       <Link 
                         key={index}
                         to={area.link}
-                        className="group bg-white border border-gray-100 rounded-lg p-4 hover:bg-gray-50 hover:shadow-sm transition-all duration-200"
+                        className="insurance-card"
                       >
-                        <div className="text-center">
-                          <h4 className="text-sm font-medium text-gray-900 mb-1 font-heading">
-                            {area.title}
-                          </h4>
-                          <p className="text-xs text-gray-600">
-                            {area.subtitle}
-                          </p>
+                        <div className="card-type font-heading">
+                          {area.title}
+                        </div>
+                        <div className="card-description">
+                          {area.subtitle.replace(' ', '\n')}
                         </div>
                       </Link>
                     ))}

@@ -575,6 +575,123 @@ const DieBavPage = () => {
             color: #10b981;
           }
 
+          /* Onboarding Card Styles */
+          .onboarding-card {
+            background: rgba(30, 58, 95, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+
+          .onboarding-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.6s ease;
+          }
+
+          .onboarding-card:hover::before {
+            left: 100%;
+          }
+
+          .onboarding-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            background: rgba(30, 58, 95, 0.9);
+            box-shadow: 
+              0 20px 40px rgba(30, 58, 95, 0.4),
+              0 0 25px rgba(100, 181, 246, 0.2);
+            border-color: rgba(100, 181, 246, 0.3);
+          }
+
+          .onboarding-label {
+            background: linear-gradient(135deg, #f8dcbf 0%, #e8ccaf 50%, #d8bcaf 100%);
+            color: #1e3a5f;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            display: inline-block;
+            font-family: 'Tenor Sans', serif;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+          }
+
+          /* Video Overlay Card Styles */
+          .video-overlay-card {
+            background: rgba(30, 58, 95, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+          }
+
+          .video-overlay-label {
+            background: linear-gradient(135deg, #f8dcbf 0%, #e8ccaf 50%, #d8bcaf 100%);
+            color: #1e3a5f;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: inline-block;
+            font-family: 'Tenor Sans', serif;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+          }
+
+          /* More Info Cards Styles */
+          .more-info-card {
+            background: rgba(30, 58, 95, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+
+          .more-info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.6s ease;
+          }
+
+          .more-info-card:hover::before {
+            left: 100%;
+          }
+
+          .more-info-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            background: rgba(30, 58, 95, 0.9);
+            box-shadow: 
+              0 25px 50px rgba(30, 58, 95, 0.4),
+              0 0 30px rgba(100, 181, 246, 0.2);
+            border-color: rgba(100, 181, 246, 0.3);
+          }
+
+          .more-info-label {
+            background: linear-gradient(135deg, #f8dcbf 0%, #e8ccaf 50%, #d8bcaf 100%);
+            color: #1e3a5f;
+            padding: 12px 20px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: inline-block;
+            font-family: 'Tenor Sans', serif;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+          }
+
+          .more-info-card:hover .more-info-label {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #ffecd2 0%, #f8dcbf 50%, #e8ccaf 100%);
+          }
+
           @media (max-width: 768px) {
             .challenges-solutions-header {
               font-size: 1.2em;
@@ -583,6 +700,14 @@ const DieBavPage = () => {
             
             .challenges-solutions-content {
               padding: 20px;
+            }
+
+            .onboarding-card {
+              padding: 16px;
+            }
+
+            .more-info-card {
+              padding: 24px;
             }
           }
         `}} />

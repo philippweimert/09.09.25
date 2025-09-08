@@ -126,6 +126,78 @@ const BkvPage = () => {
 
       {/* Benefits Section */}
       <section className="bg-acencia py-16 md:py-20">
+        <style dangerouslySetInnerHTML={{ __html: `
+          .coming-soon-card, .benefit-card {
+            background: rgba(30, 58, 95, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+
+          .coming-soon-card::before, .benefit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.6s ease;
+          }
+
+          .coming-soon-card:hover::before, .benefit-card:hover::before {
+            left: 100%;
+          }
+
+          .coming-soon-card:hover, .benefit-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            background: rgba(30, 58, 95, 0.9);
+            box-shadow: 
+              0 25px 50px rgba(30, 58, 95, 0.4),
+              0 0 30px rgba(100, 181, 246, 0.2);
+            border-color: rgba(100, 181, 246, 0.3);
+          }
+
+          .coming-soon-label, .benefit-label {
+            background: linear-gradient(135deg, #f8dcbf 0%, #e8ccaf 50%, #d8bcaf 100%);
+            color: #1e3a5f;
+            padding: 12px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            display: inline-block;
+            font-family: 'Tenor Sans', serif;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+          }
+
+          .coming-soon-label {
+            font-size: 1.25rem;
+          }
+
+          .benefit-label {
+            font-size: 1.1rem;
+          }
+
+          .coming-soon-card:hover .coming-soon-label, 
+          .benefit-card:hover .benefit-label {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+            background: linear-gradient(135deg, #ffecd2 0%, #f8dcbf 50%, #e8ccaf 100%);
+          }
+
+          @media (max-width: 768px) {
+            .coming-soon-label {
+              font-size: 1.1rem;
+              padding: 10px 16px;
+            }
+            
+            .benefit-label {
+              font-size: 1rem;
+              padding: 8px 16px;
+            }
+          }
+        `}} />
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6 tracking-tight leading-tight font-heading">

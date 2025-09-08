@@ -117,13 +117,7 @@ const Header = () => {
           </nav>
 
           {/* Primary CTA - Professional */}
-          <div className="flex items-center space-x-3">
-            <button 
-              className="bg-acencia-orange hover:bg-acencia-orange/90 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-acencia-orange focus:ring-offset-2 focus:ring-offset-acencia"
-              onClick={() => window.open('https://www.smartcloudservices.de/acencia/vp-login/', '_blank')}
-            >
-              Login VP
-            </button>
+          <div className="flex items-center space-x-4">
             <button 
               className="bg-acencia-orange hover:bg-acencia-orange/90 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-acencia-orange focus:ring-offset-2 focus:ring-offset-acencia"
               onClick={() => window.open('https://www.smartcloudservices.de/acencia/login/login.do', '_blank')}

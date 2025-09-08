@@ -322,18 +322,13 @@ const DieBavPage = () => {
             </div>
 
             {/* Step 3 */}
-            <div className="flex flex-col items-center text-center max-w-sm">
-              <div className="bg-gradient-to-br from-orange-200 to-orange-100 rounded-xl p-6 mb-4 shadow-lg border border-orange-200 min-h-[120px] flex items-center justify-center w-full">
-                <div>
-                  <h3 className="text-lg font-semibold text-acencia mb-2 font-heading">
-                    Mitarbeiterkommunikation
-                  </h3>
-                  <h3 className="text-lg font-semibold text-acencia font-heading">
-                    & (digitale) Beratung
-                  </h3>
+            <div className="flex flex-col items-center text-center max-w-sm process-card" data-type="step3">
+              <div className="process-card-body">
+                <div className="process-card-label">
+                  Mitarbeiterkommunikation & (digitale) Beratung
                 </div>
               </div>
-              <h4 className="text-xl font-semibold text-white mb-4 font-heading border-b-2 border-white pb-2">
+              <h4 className="text-xl font-semibold text-white mb-4 font-heading border-b-2 border-white pb-2 mt-6">
                 Wir begeistern Ihre Mitarbeitenden
               </h4>
               <p className="text-acencia-blue text-sm leading-relaxed">

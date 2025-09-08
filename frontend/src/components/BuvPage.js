@@ -138,16 +138,16 @@ const BuvPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 text-center hover:bg-gray-50 transition-colors duration-150">
+              <div key={index} className="benefit-card p-6 text-center relative overflow-hidden">
                 <div className="w-14 h-14 bg-gradient-to-br from-acencia-orange/10 to-acencia-orange/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <div className="text-acencia-orange">
                     {benefit.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 font-heading">
+                <div className="benefit-label mb-3">
                   {benefit.title}
-                </h3>
-                <p className="text-gray-600 text-base leading-relaxed">
+                </div>
+                <p className="text-acencia-blue text-base leading-relaxed">
                   {benefit.description}
                 </p>
               </div>

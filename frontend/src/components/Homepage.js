@@ -236,6 +236,59 @@ const Homepage = () => {
                   </div>
                 </div>
 
+                <style dangerouslySetInnerHTML={{ __html: `
+                  .onboarding-card-green {
+                    background: rgba(16, 64, 32, 0.85);
+                    backdrop-filter: blur(20px);
+                    border: 1px solid rgba(34, 197, 94, 0.3);
+                    border-radius: 20px;
+                    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                  }
+
+                  .onboarding-card-green::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
+                    transition: left 0.6s ease;
+                  }
+
+                  .onboarding-card-green:hover::before {
+                    left: 100%;
+                  }
+
+                  .onboarding-card-green:hover {
+                    transform: translateY(-5px) scale(1.02);
+                    background: rgba(16, 64, 32, 0.9);
+                    box-shadow: 
+                      0 20px 40px rgba(16, 64, 32, 0.4),
+                      0 0 25px rgba(34, 197, 94, 0.3);
+                    border-color: rgba(34, 197, 94, 0.5);
+                  }
+
+                  .onboarding-label-green {
+                    background: linear-gradient(135deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+                    color: #ffffff;
+                    padding: 8px 16px;
+                    border-radius: 15px;
+                    font-size: 0.875rem;
+                    font-weight: 700;
+                    display: inline-block;
+                    font-family: 'Tenor Sans', serif;
+                    box-shadow: 0 3px 10px rgba(34, 197, 94, 0.3);
+                    transition: all 0.3s ease;
+                  }
+
+                  .onboarding-card-green:hover .onboarding-label-green {
+                    transform: scale(1.05);
+                    box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
+                    background: linear-gradient(135deg, #6ee7b7 0%, #4ade80 50%, #22c55e 100%);
+                  }
+                `}} />
+
                 {/* Professional Onboarding Card - Green Glassmorphism */}
                 <div className="onboarding-card-green relative overflow-hidden p-4">
                   <div className="flex items-center justify-between">

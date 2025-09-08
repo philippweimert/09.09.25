@@ -538,7 +538,7 @@ const DieBavPage = () => {
           .challenges-solutions-card:hover .challenges-solutions-header {
             transform: scale(1.02);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            background: linear-gradient(135deg, #ffecd2 0%, #f8dcbf 50%, #e8ccaf 100%);
+            background: rgba(30, 58, 95, 0.95);
           }
 
           .challenges-solutions-content {

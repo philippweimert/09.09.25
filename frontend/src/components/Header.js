@@ -184,7 +184,16 @@ const Header = () => {
               Kontakt
             </Link>
             
-            <div className="pt-4">
+            <div className="pt-4 space-y-3">
+              <button 
+                className="w-full bg-acencia-orange hover:bg-acencia-orange/90 text-white py-3 rounded-lg text-sm font-medium transition-colors duration-200"
+                onClick={() => {
+                  window.open('https://www.smartcloudservices.de/acencia/vp-login/', '_blank');
+                  setIsMenuOpen(false);
+                }}
+              >
+                Login VP
+              </button>
               <button 
                 className="w-full bg-acencia-orange hover:bg-acencia-orange/90 text-white py-3 rounded-lg text-sm font-medium transition-colors duration-200"
                 onClick={() => {
@@ -192,7 +201,7 @@ const Header = () => {
                   setIsMenuOpen(false);
                 }}
               >
-                Login Portal
+                Login HR
               </button>
             </div>
           </div>

@@ -267,6 +267,102 @@ const DieBavPage = () => {
         </div>
       </section>
 
+      {/* bAV Process Section */}
+      <section className="bg-acencia py-16 md:py-20 relative overflow-hidden">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-8 relative z-10">
+          
+          {/* Section Title */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6 tracking-tight leading-tight font-heading">
+              Als Partner begleiten wir Sie entlang des gesamten bAV-Prozesses
+            </h2>
+          </div>
+
+          {/* Process Steps */}
+          <div className="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-8 mb-16">
+            
+            {/* Step 1 */}
+            <div className="flex flex-col items-center text-center max-w-sm">
+              <div className="bg-gradient-to-br from-orange-200 to-orange-100 rounded-xl p-6 mb-4 shadow-lg border border-orange-200 min-h-[120px] flex items-center justify-center w-full">
+                <div>
+                  <h3 className="text-lg font-semibold text-acencia mb-2 font-heading">
+                    Rechtliche Prüfung
+                  </h3>
+                  <h3 className="text-lg font-semibold text-acencia font-heading">
+                    & Einrichtung bAV
+                  </h3>
+                </div>
+              </div>
+              <h4 className="text-xl font-semibold text-white mb-4 font-heading border-b-2 border-white pb-2">
+                Wir geben Sicherheit
+              </h4>
+              <p className="text-acencia-blue text-sm leading-relaxed">
+                Unter Berücksichtigung aller rechtlichen Aspekte ermitteln wir unabhängig das optimale Vorsorgemodell für Unternehmen und Mitarbeitende - individuell zugeschnitten mit innovativen Produktoptionen.
+              </p>
+            </div>
+
+            {/* Arrow 1 */}
+            <div className="hidden lg:block transform rotate-0 lg:rotate-0">
+              <div className="w-12 h-8 bg-gradient-to-r from-orange-300 to-orange-400" style={{ clipPath: 'polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%, 25% 50%)' }}></div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex flex-col items-center text-center max-w-sm">
+              <div className="bg-gradient-to-br from-orange-200 to-orange-100 rounded-xl p-6 mb-4 shadow-lg border border-orange-200 min-h-[120px] flex items-center justify-center w-full">
+                <div>
+                  <h3 className="text-lg font-semibold text-acencia mb-2 font-heading">
+                    Digitale bAV-Verwaltung
+                  </h3>
+                  <h3 className="text-lg font-semibold text-acencia font-heading">
+                    & laufender Support
+                  </h3>
+                </div>
+              </div>
+              <h4 className="text-xl font-semibold text-white mb-4 font-heading border-b-2 border-white pb-2">
+                Wir erleichtern den Alltag
+              </h4>
+              <p className="text-acencia-blue text-sm leading-relaxed">
+                Wir richten Ihre bAV-Verwaltung ein, digitalisieren und automatisieren Ihre Prozesse, unabhängig davon ob Sie bereits eine bAV eingerichtet haben oder dies erst planen. Im Hintergrund unterstützt Sie unser persönlicher Support proaktiv.
+              </p>
+            </div>
+
+            {/* Arrow 2 */}
+            <div className="hidden lg:block transform rotate-0 lg:rotate-0">
+              <div className="w-12 h-8 bg-gradient-to-r from-orange-300 to-orange-400" style={{ clipPath: 'polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%, 25% 50%)' }}></div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex flex-col items-center text-center max-w-sm">
+              <div className="bg-gradient-to-br from-orange-200 to-orange-100 rounded-xl p-6 mb-4 shadow-lg border border-orange-200 min-h-[120px] flex items-center justify-center w-full">
+                <div>
+                  <h3 className="text-lg font-semibold text-acencia mb-2 font-heading">
+                    Mitarbeiterkommunikation
+                  </h3>
+                  <h3 className="text-lg font-semibold text-acencia font-heading">
+                    & (digitale) Beratung
+                  </h3>
+                </div>
+              </div>
+              <h4 className="text-xl font-semibold text-white mb-4 font-heading border-b-2 border-white pb-2">
+                Wir begeistern Ihre Mitarbeitenden
+              </h4>
+              <p className="text-acencia-blue text-sm leading-relaxed">
+                Wir unterstützen Sie bei der bAV-Kommunikation an Ihre Mitarbeitenden durch moderne Informationsmaßnahmen. Auf Wunsch beraten wir jeden Mitarbeitenden zu seiner optimalen Vorsorgelösung - digital oder vor Ort.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* Background Geometric Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-white/10 rounded-lg transform rotate-45"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 border border-white/5 rounded-full"></div>
+          <div className="absolute top-1/3 right-1/6 w-32 h-32 border border-white/10 transform rotate-12"></div>
+        </div>
+      </section>
+
       {/* Challenges & Solutions Section */}
       <section className="bg-acencia py-16 md:py-20">
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">

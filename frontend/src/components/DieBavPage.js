@@ -675,8 +675,16 @@ const DieBavPage = () => {
           }
         `}} />
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6 tracking-tight leading-tight font-heading">
+              Der ACENCIA-Vorteil auf einen Blick
+            </h2>
+            <p className="text-lg text-acencia-blue max-w-2xl mx-auto leading-relaxed">
+              Sehen Sie selbst, wie ACENCIA Ihre bAV-Verwaltung revolutioniert
+            </p>
+          </div>
 
-          {/* Single Collapsible Card */}
+          {/* Always Expanded Comparison Card */}
           <div className="max-w-4xl mx-auto">
             <div 
               className="challenges-solutions-card"

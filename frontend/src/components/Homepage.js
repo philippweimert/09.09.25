@@ -313,12 +313,6 @@ const Homepage = () => {
           </div>
         </section>
         
-        {/* Unsere Kunden vertrauen uns Sektion */}
-        <CustomerSegments />
-        
-        {/* Google Bewertungen Section */}
-        <GoogleReviews />
-        
         <Footer />
       </div>
     </div>

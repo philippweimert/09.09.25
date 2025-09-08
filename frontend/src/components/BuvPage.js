@@ -156,41 +156,7 @@ const BuvPage = () => {
         </div>
       </section>
 
-      {/* Coverage Areas */}
-      <section className="bg-acencia py-16 md:py-20">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6 tracking-tight leading-tight font-heading">
-              Unsere bUV-Leistungen
-            </h2>
-            <p className="text-lg text-acencia-blue max-w-2xl mx-auto leading-relaxed">
-              Umfassender Unfallschutz in allen Lebensbereichen
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {coverageAreas.map((area, index) => (
-              <div key={index} className="bg-white rounded-lg p-8 hover:bg-gray-50 transition-colors duration-150">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 font-heading">
-                  {area.title}
-                </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {area.description}
-                </p>
-                
-                <ul className="space-y-2">
-                  {area.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-acencia-orange flex-shrink-0" />
-                      <span className="text-gray-600 text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Risk Prevention */}
       <section className="bg-acencia py-16 md:py-20">

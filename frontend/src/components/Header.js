@@ -152,14 +152,15 @@ const Header = () => {
                 >
                   Service-Team
                 </Link>
-                <Link 
-                  to="/kontakt" 
-                  className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-150"
-                >
-                  Kontakt
-                </Link>
               </div>
             </div>
+            
+            <Link 
+              to="/kontakt" 
+              className="text-acencia-blue hover:text-white font-medium text-sm transition-colors duration-200 py-2"
+            >
+              Kontakt
+            </Link>
           </nav>
 
           {/* Primary CTA - Professional */}

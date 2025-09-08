@@ -685,56 +685,42 @@ const DieBavPage = () => {
           </div>
 
           {/* Always Expanded Comparison Card */}
-          <div className="max-w-4xl mx-auto">
-            <div 
-              className="challenges-solutions-card"
-              onClick={() => setIsChallengesExpanded(!isChallengesExpanded)}
-            >
-              <div className="challenges-solutions-header">
-                <span>Ohne ACENCIA vs. Mit ACENCIA</span>
-                {isChallengesExpanded ? (
-                  <ChevronUp className="w-6 h-6" />
-                ) : (
-                  <ChevronDown className="w-6 h-6" />
-                )}
-              </div>
-              
-              <div className={`challenges-solutions-content ${isChallengesExpanded ? 'expanded' : ''}`}>
-                {isChallengesExpanded && (
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    {/* Without ACENCIA */}
-                    <div>
-                      <h3 className="text-xl font-semibold text-red-400 mb-6 font-heading">❌ Ohne ACENCIA</h3>
-                      <div className="space-y-4">
-                        {withoutAcencia.map((item, index) => (
-                          <div key={index} className="challenge-item">
-                            <AlertTriangle className="challenge-icon" />
-                            <div>
-                              <h4 className="font-medium text-white font-heading">{item.title}</h4>
-                              <p className="text-acencia-blue text-sm">{item.description}</p>
-                            </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="comparison-card">
+              <div className="comparison-content">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                  {/* Without ACENCIA */}
+                  <div>
+                    <h3 className="text-xl font-semibold text-red-400 mb-6 font-heading">❌ Ohne ACENCIA</h3>
+                    <div className="space-y-4">
+                      {withoutAcencia.map((item, index) => (
+                        <div key={index} className="challenge-item">
+                          <AlertTriangle className="challenge-icon" />
+                          <div>
+                            <h4 className="font-medium text-white font-heading">{item.title}</h4>
+                            <p className="text-acencia-blue text-sm">{item.description}</p>
                           </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* With ACENCIA */}
-                    <div>
-                      <h3 className="text-xl font-semibold text-green-400 mb-6 font-heading">✅ Mit ACENCIA</h3>
-                      <div className="space-y-4">
-                        {withAcencia.map((item, index) => (
-                          <div key={index} className="solution-item">
-                            <CheckCircle className="solution-icon" />
-                            <div>
-                              <h4 className="font-medium text-white font-heading">{item.title}</h4>
-                              <p className="text-acencia-blue text-sm">{item.description}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                )}
+
+                  {/* With ACENCIA */}
+                  <div>
+                    <h3 className="text-xl font-semibold text-green-400 mb-6 font-heading">✅ Mit ACENCIA</h3>
+                    <div className="space-y-4">
+                      {withAcencia.map((item, index) => (
+                        <div key={index} className="solution-item">
+                          <CheckCircle className="solution-icon" />
+                          <div>
+                            <h4 className="font-medium text-white font-heading">{item.title}</h4>
+                            <p className="text-acencia-blue text-sm">{item.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

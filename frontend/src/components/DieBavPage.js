@@ -26,7 +26,6 @@ const DieBavPage = () => {
     // Check if URL has hash for challenges section
     if (window.location.hash === '#herausforderungen') {
       setTimeout(() => {
-        setIsChallengesExpanded(true);
         // Scroll to challenges section after a short delay
         setTimeout(() => {
           const challengesElement = document.getElementById('herausforderungen');

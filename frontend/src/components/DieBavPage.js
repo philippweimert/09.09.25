@@ -662,7 +662,7 @@ const DieBavPage = () => {
               <Link 
                 key={index}
                 to={box.link}
-                className="group bg-white border border-gray-100 rounded-lg p-8 hover:bg-gray-50 hover:shadow-sm transition-all duration-150 ease-out"
+                className="group more-info-card p-8 relative overflow-hidden"
               >
                 <div className="w-14 h-14 bg-gradient-to-br from-acencia-orange/10 to-acencia-orange/20 rounded-xl flex items-center justify-center mb-6 group-hover:from-acencia-orange/20 group-hover:to-acencia-orange/30 transition-all duration-150">
                   <div className="text-acencia-orange">
@@ -670,10 +670,10 @@ const DieBavPage = () => {
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 font-heading">
+                <div className="more-info-label mb-3">
                   {box.title}
-                </h3>
-                <p className="text-gray-600 text-base leading-relaxed mb-6">
+                </div>
+                <p className="text-acencia-blue text-base leading-relaxed mb-6">
                   {box.description}
                 </p>
                 

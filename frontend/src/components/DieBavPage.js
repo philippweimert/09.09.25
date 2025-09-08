@@ -726,48 +726,6 @@ const DieBavPage = () => {
         </div>
       </section>
 
-      {/* More Information Section */}
-      <section className="bg-acencia py-16 md:py-20">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6 tracking-tight leading-tight font-heading">
-              Weitere Informationen
-            </h2>
-            <p className="text-lg text-acencia-blue max-w-2xl mx-auto leading-relaxed">
-              Vertiefen Sie Ihr Wissen über die betriebliche Altersvorsorge
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {moreInfoBoxes.map((box, index) => (
-              <Link 
-                key={index}
-                to={box.link}
-                className="group more-info-card p-8 relative overflow-hidden"
-              >
-                <div className="w-14 h-14 bg-gradient-to-br from-acencia-orange/10 to-acencia-orange/20 rounded-xl flex items-center justify-center mb-6 group-hover:from-acencia-orange/20 group-hover:to-acencia-orange/30 transition-all duration-150">
-                  <div className="text-acencia-orange">
-                    {box.icon}
-                  </div>
-                </div>
-                
-                <div className="more-info-label mb-3">
-                  {box.title}
-                </div>
-                <p className="text-acencia-blue text-base leading-relaxed mb-6">
-                  {box.description}
-                </p>
-                
-                <div className="flex items-center space-x-2 text-acencia-orange group-hover:text-acencia-orange/80 transition-colors duration-150">
-                  <span className="font-medium text-sm">Mehr erfahren</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-150" />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Für jede Unternehmensgröße Sektion */}
       <CustomerSegments />
       

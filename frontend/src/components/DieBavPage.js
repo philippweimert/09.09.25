@@ -436,7 +436,7 @@ const DieBavPage = () => {
                 Wir erleichtern den Alltag
               </h4>
               <p className="text-acencia-blue text-sm leading-relaxed">
-                Wir richten Ihre bAV-Verwaltung ein, digitalisieren und automatisieren Ihre Prozesse, unabhängig davon ob Sie bereits eine bAV eingerichtet haben oder dies erst planen. Im Hintergrund unterstützt Sie unser persönlicher Support proaktiv.
+                Digitale und automatisierte bAV-Verwaltung – ob neu oder bestehend, mit persönlichem Support im Hintergrund.
               </p>
             </div>
 

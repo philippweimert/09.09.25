@@ -657,13 +657,12 @@ const DieBavPage = () => {
           }
 
           @media (max-width: 768px) {
-            .challenges-solutions-header {
-              font-size: 1.2em;
-              padding: 16px 20px;
+            .comparison-content {
+              padding: 24px;
             }
             
-            .challenges-solutions-content {
-              padding: 20px;
+            .challenge-item, .solution-item {
+              margin-bottom: 16px;
             }
 
             .onboarding-card {

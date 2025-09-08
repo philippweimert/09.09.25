@@ -395,12 +395,7 @@ const DieBavPage = () => {
         `}} />
         <div className="max-w-[1200px] mx-auto px-6 md:px-8 relative z-10">
           
-          {/* Section Title */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6 tracking-tight leading-tight font-heading">
-              Als Partner begleiten wir Sie entlang des gesamten bAV-Prozesses
-            </h2>
-          </div>
+
 
           {/* Process Steps */}
           <div className="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-8 mb-16">

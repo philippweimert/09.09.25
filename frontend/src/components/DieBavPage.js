@@ -463,13 +463,6 @@ const DieBavPage = () => {
           </div>
 
         </div>
-
-        {/* Background Geometric Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-white/10 rounded-lg transform rotate-45"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 border border-white/5 rounded-full"></div>
-          <div className="absolute top-1/3 right-1/6 w-32 h-32 border border-white/10 transform rotate-12"></div>
-        </div>
       </section>
 
       {/* Challenges & Solutions Section */}

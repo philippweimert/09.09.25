@@ -256,10 +256,13 @@ const DieBavPage = () => {
                     )}
                   </div>
                 ) : (
-                  <div className="flex items-center justify-center h-full text-acencia-blue">
+                  <div className="flex flex-col items-center justify-center h-full text-white">
                     <div className="text-center">
-                      <Play className="w-16 h-16 mx-auto mb-4" />
-                      <p className="text-sm">Video wird geladen...</p>
+                      <div className="w-16 h-16 mx-auto mb-4 bg-acencia-orange rounded-full flex items-center justify-center">
+                        <Play className="w-8 h-8 text-white" />
+                      </div>
+                      <div className="text-white text-lg font-medium mb-2">Sehen Sie ACENCIA in Aktion</div>
+                      <p className="text-acencia-blue text-sm">3 Minuten Demo-Video</p>
                     </div>
                   </div>
                 )}

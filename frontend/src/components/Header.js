@@ -171,6 +171,13 @@ const Header = () => {
               bUV
             </Link>
             <Link
+              to="/aktuelles"
+              className="block py-3 text-acencia-blue hover:text-white font-medium text-sm transition-colors duration-150"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Aktuelles
+            </Link>
+            <Link
               to="/ueber-uns"
               className="block py-3 text-acencia-blue hover:text-white font-medium text-sm transition-colors duration-150"
               onClick={() => setIsMenuOpen(false)}

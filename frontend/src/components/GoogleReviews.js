@@ -1,71 +1,57 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Star } from 'lucide-react';
 
 const GoogleReviews = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
   const reviews = [
     {
       id: 1,
-      name: "Michael Weber",
+      name: "Michael Schmidt",
+      position: "HR-Leiter",  
+      company: "TechnoServ GmbH",
       rating: 5,
-      text: "ACENCIA hat unsere bAV-Verwaltung komplett digitalisiert. Der Service ist hervorragend und das Team sehr kompetent. Absolute Empfehlung!",
-      initials: "MW",
-      date: "vor 2 Monaten"
+      text: "ACENCIA hat unsere bAV-Verwaltung revolutioniert. Was früher Wochen dauerte, erledigen wir jetzt in Stunden. Unser HR-Team kann sich endlich auf strategische Aufgaben konzentrieren."
     },
     {
       id: 2,
-      name: "Dr. Petra Schneider",
+      name: "Sarah Weber",
+      position: "Geschäftsführerin",
+      company: "Innovation Labs AG",
       rating: 5,
-      text: "Endlich eine bAV-Lösung, die wirklich funktioniert! ACENCIA hat unser HR-Team entlastet und unsere Mitarbeiter sind begeistert.",
-      initials: "PS",
-      date: "vor 6 Wochen"
+      text: "Die Plattform ist intuitiv und zuverlässig. Besonders die automatischen Compliance-Updates geben uns die Sicherheit, immer rechtlich auf der sicheren Seite zu stehen."
     },
     {
       id: 3,
       name: "Thomas Müller",
+      position: "CFO",
+      company: "Mittelstand Solutions",
       rating: 5,
-      text: "Exzellente Betreuung bei der Einrichtung unserer betrieblichen Altersvorsorge. Sehr zu empfehlen für alle Unternehmen!",
-      initials: "TM",
-      date: "vor 3 Wochen"
+      text: "Transparent und Effizienz auf höchstem Niveau. ACENCIA hat unsere Verwaltungskosten um 60% reduziert und gleichzeitig die Mitarbeiterzufriedenheit erhöht."
     },
     {
       id: 4,
-      name: "Sandra Hoffmann",
-      rating: 4,
-      text: "Professionelle Beratung und reibungslose Abwicklung. Die digitale Plattform macht alles so viel einfacher.",
-      initials: "SH",
-      date: "vor 1 Monat"
+      name: "Dr. Petra Schneider",
+      position: "Personalleiterin",
+      company: "MedTech Industries",
+      rating: 5,
+      text: "Endlich eine bAV-Lösung, die wirklich funktioniert! ACENCIA hat unser HR-Team entlastet und unsere Mitarbeiter sind begeistert von der einfachen Handhabung."
     },
     {
       id: 5,
       name: "Jürgen Maier",
+      position: "Geschäftsführer",
+      company: "BuildCorp AG",
       rating: 5,
-      text: "Als Geschäftsführer kann ich ACENCIA nur empfehlen. Die rechtssichere Umsetzung und der digitale Ansatz überzeugen vollständig.",
-      initials: "JM",
-      date: "vor 5 Tagen"
+      text: "Als Geschäftsführer kann ich ACENCIA nur empfehlen. Die rechtssichere Umsetzung und der digitale Ansatz überzeugen vollständig. Ein echter Gamechanger!"
     },
     {
       id: 6,
       name: "Lisa Wagner",
+      position: "HR-Managerin",
+      company: "Future Systems",
       rating: 5,
-      text: "ACENCIA überzeugt durch Kompetenz und Innovation. Die bAV-Lösung ist genau das, was wir gesucht haben. Perfekt!",
-      initials: "LW",
-      date: "vor 2 Wochen"
-    },
-    {
-      id: 7,
-      name: "Robert Klein",
-      rating: 5,
-      text: "Fantastische Zusammenarbeit! Das Team von ACENCIA hat uns bei jedem Schritt perfekt begleitet. Sehr empfehlenswert!",
-      initials: "RK",
-      date: "vor 1 Woche"
-    },
-    {
-      id: 8,
-      name: "Christine Bauer",
-      rating: 4,
-      text: "Sehr gute digitale Lösung für unsere bAV. Der Implementierungsprozess war durchdacht und das Support-Team hilfsbereit.",
-      initials: "CB",
-      date: "vor 8 Tagen"
+      text: "ACENCIA überzeugt durch Kompetenz und Innovation. Die bAV-Lösung ist genau das, was wir gesucht haben. Support ist erstklassig!"
     }
   ];
 

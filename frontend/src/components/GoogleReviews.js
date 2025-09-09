@@ -80,8 +80,9 @@ const GoogleReviews = () => {
     <section className="bg-acencia py-16 md:py-20 overflow-hidden">
       <style dangerouslySetInnerHTML={{ __html: `
         .review-carousel {
-          perspective: 1000px;
-          transform-style: preserve-3d;
+          position: relative;
+          width: 100%;
+          height: 400px;
         }
         
         .review-card {
@@ -89,33 +90,47 @@ const GoogleReviews = () => {
           backdrop-filter: blur(20px);
           border: 1px solid rgba(255, 255, 255, 0.2);
           border-radius: 20px;
-          transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-          transform-origin: center center;
+          transition: all 0.6s ease-in-out;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
         }
         
-        .review-card:nth-child(1) {
-          transform: translateX(-20%) scale(0.9) rotateY(15deg);
+        .review-card-left {
+          left: 0;
+          width: 280px;
+          height: 320px;
+          transform: translateY(-50%) scale(0.85);
+          opacity: 0.6;
           z-index: 1;
-          opacity: 0.7;
         }
         
-        .review-card:nth-child(2) {
-          transform: translateX(0%) scale(1) rotateY(0deg);
-          z-index: 3;
+        .review-card-center {
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          width: 350px;
+          height: 380px;
           opacity: 1;
+          z-index: 3;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
         
-        .review-card:nth-child(3) {
-          transform: translateX(20%) scale(0.9) rotateY(-15deg);
+        .review-card-right {
+          right: 0;
+          width: 280px;
+          height: 320px;
+          transform: translateY(-50%) scale(0.85);
+          opacity: 0.6;
           z-index: 1;
-          opacity: 0.7;
         }
         
         .review-card:hover {
-          transform: translateX(0%) scale(1.02) rotateY(0deg) !important;
+          transform: translateX(-50%) translateY(-50%) scale(1.05) !important;
           z-index: 5 !important;
           opacity: 1 !important;
-          box-shadow: 0 20px 40px rgba(30, 58, 95, 0.4);
+          box-shadow: 0 25px 50px rgba(30, 58, 95, 0.4) !important;
+          left: 50% !important;
+          right: auto !important;
         }
         
         .star-rating {
@@ -123,14 +138,28 @@ const GoogleReviews = () => {
           filter: drop-shadow(0 0 4px rgba(250, 153, 57, 0.3));
         }
         
-        @media (max-width: 768px) {
-          .review-card:nth-child(1),
-          .review-card:nth-child(3) {
+        @media (max-width: 1024px) {
+          .review-card-left,
+          .review-card-right {
             display: none;
           }
           
-          .review-card:nth-child(2) {
-            transform: none;
+          .review-card-center {
+            width: 320px;
+            height: 350px;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .review-card-center {
+            width: 300px;
+            height: 320px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+          }
+          
+          .review-carousel {
+            height: 350px;
           }
         }
       `}} />

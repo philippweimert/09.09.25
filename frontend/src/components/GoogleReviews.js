@@ -188,12 +188,18 @@ const GoogleReviews = () => {
         </div>
 
         {/* Carousel Reviews */}
-        <div className="review-carousel relative h-96 flex items-center justify-center">
-          {visibleReviews.map((review, index) => (
-            <div
-              key={`${review.id}-${currentIndex}-${index}`}
-              className="review-card absolute w-80 md:w-96 h-80 p-8 flex flex-col justify-between"
-            >
+        <div className="review-carousel">
+          {visibleReviews.map((review, index) => {
+            let positionClass = '';
+            if (index === 0) positionClass = 'review-card-left';
+            else if (index === 1) positionClass = 'review-card-center';
+            else if (index === 2) positionClass = 'review-card-right';
+            
+            return (
+              <div
+                key={`${review.id}-${currentIndex}-${index}`}
+                className={`review-card ${positionClass} p-6 flex flex-col justify-between`}
+              >
               {/* Stars */}
               <div className="flex items-center justify-center mb-6">
                 {[1,2,3,4,5].map((star) => (

@@ -61,12 +61,6 @@ const Header = () => {
                 >
                   Für Arbeitnehmer
                 </Link>
-                <Link 
-                  to="/die-bav/aktuelles" 
-                  className="block px-4 py-2 text-sm text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-150"
-                >
-                  Aktuelles
-                </Link>
               </div>
             </div>
             

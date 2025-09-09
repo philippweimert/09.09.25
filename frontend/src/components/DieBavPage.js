@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import CustomerSegments from "./CustomerSegments";
 import GoogleReviews from "./GoogleReviews";
 import { Button } from "./ui/button";
-import { Shield, Users, TrendingUp, ArrowRight, Building2, AlertTriangle, CheckCircle, Play } from "lucide-react";
+import { Shield, Users, TrendingUp, ArrowRight, Building2, AlertTriangle, CheckCircle, Play, Clock } from "lucide-react";
 
 const DieBavPage = () => {
 

@@ -166,33 +166,52 @@ const DieBavPage = () => {
               </h1>
               
               <p className="text-xl text-acencia-blue mb-8 leading-relaxed">
-                Entlasten Sie Ihr HR-Team mit unserer vollautomatisierten, digitalen All-in-One-Plattform für die betriebliche Altersvorsorge.
+                Sparen Sie Zeit, reduzieren Sie Risiken und entlasten Sie Ihr HR-Team.
               </p>
 
-              {/* Benefits List */}
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-acencia-orange rounded-full mt-2.5 flex-shrink-0"></div>
-                  <span className="text-white text-base">100% digitale Verwaltung</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-acencia-orange rounded-full mt-2.5 flex-shrink-0"></div>
-                  <span className="text-white text-base">Vollautomatisierte Prozesse</span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-acencia-orange rounded-full mt-2.5 flex-shrink-0"></div>
-                  <span className="text-white text-base">DSGVO-konform & rechtssicher</span>
-                </li>
-              </ul>
+              {/* Benefits Grid - 2x2 Layout */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-acencia-orange/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-3 h-3 bg-acencia-orange rounded-full"></div>
+                  </div>
+                  <div>
+                    <div className="text-white text-base font-medium">Zeitersparnis durch Automatisierung</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-acencia-orange/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Users className="w-4 h-4 text-acencia-orange" />
+                  </div>
+                  <div>
+                    <div className="text-white text-base font-medium">HR-Entlastung bei Verwaltungsaufgaben</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-acencia-orange/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-4 h-4 text-acencia-orange" />
+                  </div>
+                  <div>
+                    <div className="text-white text-base font-medium">Vollständige Rechtssicherheit</div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-acencia-orange/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="w-4 h-4 text-acencia-orange" />
+                  </div>
+                  <div>
+                    <div className="text-white text-base font-medium">DSGVO Konform</div>
+                  </div>
+                </div>
+              </div>
 
               {/* CTA Button */}
               <div className="mb-8">
                 <Button 
-                  className="bg-acencia-orange hover:bg-acencia-orange/90 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2 focus:ring-2 focus:ring-acencia-orange focus:ring-offset-2 focus:ring-offset-acencia"
+                  className="bg-acencia-orange hover:bg-acencia-orange/90 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-150 flex items-center justify-center space-x-2 focus:ring-2 focus:ring-acencia-orange focus:ring-offset-2 focus:ring-offset-acencia text-lg"
                   onClick={() => window.open('https://outlook.office365.com/owa/calendar/ACENCIAde@acencia.de/bookings/', '_blank')}
                 >
-                  <span>Jetzt starten</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <span>Kostenlose Erstberatung</span>
                 </Button>
               </div>
 

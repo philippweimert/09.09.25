@@ -84,6 +84,13 @@ const Header = () => {
               bUV
             </Link>
             
+            <Link 
+              to="/aktuelles" 
+              className="text-acencia-blue hover:text-white font-medium text-sm transition-colors duration-200 py-2"
+            >
+              Aktuelles
+            </Link>
+            
             <div 
               className="relative group"
               onMouseEnter={() => setIsAboutDropdownOpen(true)}

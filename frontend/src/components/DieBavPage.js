@@ -173,7 +173,7 @@ const DieBavPage = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 <div className="flex items-start space-x-3">
                   <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <div className="w-4 h-4 text-white">⏱</div>
+                    <Clock className="w-4 h-4 text-white" />
                   </div>
                   <div>
                     <div className="text-white text-base font-medium">Zeitersparnis durch Automatisierung</div>

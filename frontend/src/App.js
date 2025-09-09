@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Homepage />} />
+          <Route path="/" element={<DieBavPage />} />
           <Route path="/ueber-uns" element={<AboutPage />} />
           <Route path="/ueber-uns/service-team" element={<ServiceTeamPage />} />
           <Route path="/bav-rechtliche-grundlagen" element={<EmployerObligationsPage />} />

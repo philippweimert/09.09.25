@@ -500,67 +500,88 @@ const DieBavPage = () => {
             </div>
           </div>
 
-          {/* Compact Comparison */}
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-3 font-heading">
-              Der ACENCIA-Vorteil
+          {/* New Comparison Section */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4 font-heading">
+              Der <span className="text-acencia-orange">Unterschied</span> ist deutlich
             </h2>
+            <p className="text-xl text-acencia-blue">
+              Sehen Sie selbst, wie ACENCIA Ihre bAV-Verwaltung revolutioniert
+            </p>
           </div>
 
           <div className="compact-comparison-card">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Without ACENCIA */}
               <div>
-                <h3 className="text-lg font-semibold text-red-400 mb-4 font-heading">❌ Ohne ACENCIA</h3>
-                <div className="space-y-3">
-                  <div className="compact-benefit-item">
-                    <AlertTriangle className="compact-benefit-icon compact-challenge-icon" />
-                    <div>
-                      <h4 className="font-medium text-white text-sm">Manuelle bAV-Verwaltung</h4>
-                      <p className="text-acencia-blue text-xs">Zeitaufwändige Papierarbeit</p>
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-semibold text-white mb-2 font-heading">Ohne ACENCIA</h3>
+                  <div className="w-24 h-1 bg-red-500 mx-auto"></div>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-white/5 border border-white/10 rounded-lg p-4 flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-red-500/20 rounded-full flex items-center justify-center">
+                        <FileText className="w-5 h-5 text-red-500" />
+                      </div>
+                      <span className="text-white font-medium">Papierkram & manuelle Prozesse</span>
                     </div>
+                    <ChevronDown className="w-4 h-4 text-acencia-blue" />
                   </div>
-                  <div className="compact-benefit-item">
-                    <AlertTriangle className="compact-benefit-icon compact-challenge-icon" />
-                    <div>
-                      <h4 className="font-medium text-white text-sm">HR-Überlastung</h4>
-                      <p className="text-acencia-blue text-xs">Repetitive Verwaltungsaufgaben</p>
+                  <div className="bg-white/5 border border-white/10 rounded-lg p-4 flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-red-500/20 rounded-full flex items-center justify-center">
+                        <X className="w-5 h-5 text-red-500" />
+                      </div>
+                      <span className="text-white font-medium">Rechtsunsicherheit</span>
                     </div>
+                    <ChevronDown className="w-4 h-4 text-acencia-blue" />
                   </div>
-                  <div className="compact-benefit-item">
-                    <AlertTriangle className="compact-benefit-icon compact-challenge-icon" />
-                    <div>
-                      <h4 className="font-medium text-white text-sm">Compliance-Risiken</h4>
-                      <p className="text-acencia-blue text-xs">Schwierige Arbeitgeberpflichten</p>
+                  <div className="bg-white/5 border border-white/10 rounded-lg p-4 flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-red-500/20 rounded-full flex items-center justify-center">
+                        <Clock className="w-5 h-5 text-red-500" />
+                      </div>
+                      <span className="text-white font-medium">Hoher Zeitaufwand</span>
                     </div>
+                    <ChevronDown className="w-4 h-4 text-acencia-blue" />
                   </div>
                 </div>
               </div>
 
               {/* With ACENCIA */}
               <div>
-                <h3 className="text-lg font-semibold text-green-400 mb-4 font-heading">✅ Mit ACENCIA</h3>
-                <div className="space-y-3">
-                  <div className="compact-benefit-item">
-                    <CheckCircle className="compact-benefit-icon compact-solution-icon" />
-                    <div>
-                      <h4 className="font-medium text-white text-sm">Vollautomatisierung</h4>
-                      <p className="text-acencia-blue text-xs">Bis zu 80% Zeitersparnis</p>
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-semibold text-white mb-2 font-heading">Mit ACENCIA</h3>
+                  <div className="w-24 h-1 bg-green-500 mx-auto"></div>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-white/5 border border-white/10 rounded-lg p-4 flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
+                        <Zap className="w-5 h-5 text-green-500" />
+                      </div>
+                      <span className="text-white font-medium">Vollautomatisierung</span>
                     </div>
+                    <ChevronDown className="w-4 h-4 text-acencia-blue" />
                   </div>
-                  <div className="compact-benefit-item">
-                    <CheckCircle className="compact-benefit-icon compact-solution-icon" />
-                    <div>
-                      <h4 className="font-medium text-white text-sm">HR-Entlastung</h4>
-                      <p className="text-acencia-blue text-xs">Fokus auf strategische Aufgaben</p>
+                  <div className="bg-white/5 border border-white/10 rounded-lg p-4 flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
+                        <Shield className="w-5 h-5 text-green-500" />
+                      </div>
+                      <span className="text-white font-medium">100% Rechtssicherheit</span>
                     </div>
+                    <ChevronDown className="w-4 h-4 text-acencia-blue" />
                   </div>
-                  <div className="compact-benefit-item">
-                    <CheckCircle className="compact-benefit-icon compact-solution-icon" />
-                    <div>
-                      <h4 className="font-medium text-white text-sm">Automatische Compliance</h4>
-                      <p className="text-acencia-blue text-xs">Alle Pflichten ohne Aufwand</p>
+                  <div className="bg-white/5 border border-white/10 rounded-lg p-4 flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center">
+                        <Users className="w-5 h-5 text-green-500" />
+                      </div>
+                      <span className="text-white font-medium">HR-Entlastung</span>
                     </div>
+                    <ChevronDown className="w-4 h-4 text-acencia-blue" />
                   </div>
                 </div>
               </div>

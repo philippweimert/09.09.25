@@ -267,259 +267,84 @@ const DieBavPage = () => {
         </div>
       </section>
 
-      {/* bAV Process Section */}
-      <section className="bg-acencia py-16 md:py-20 relative overflow-hidden">
+      {/* Compact Process & Benefits Section */}
+      <section className="bg-acencia py-12 md:py-16 relative overflow-hidden">
         <style dangerouslySetInnerHTML={{ __html: `
-          .process-card {
-            position: relative;
+          .compact-process-card {
+            background: rgba(30, 58, 95, 0.85);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 16px;
+            transition: all 0.3s ease;
+            text-align: center;
+            height: 140px;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            animation: slideInUp 0.8s ease-out;
-            animation-fill-mode: both;
-          }
-
-          .process-card:nth-child(1) { animation-delay: 0.2s; }
-          .process-card:nth-child(3) { animation-delay: 0.4s; }
-          .process-card:nth-child(5) { animation-delay: 0.6s; }
-
-          @keyframes slideInUp {
-            0% {
-              opacity: 0;
-              transform: translateY(60px) scale(0.9);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0) scale(1);
-            }
-          }
-
-          .process-card-body {
-            background: rgba(30, 58, 95, 0.85);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 30px;
-            width: 320px;
-            height: 160px;
-            display: flex;
-            align-items: flex-end;
             justify-content: center;
-            padding: 25px;
-            position: relative;
-            z-index: 50;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            overflow: hidden;
           }
 
-          .process-card-body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.6s ease;
-          }
-
-          .process-card:hover .process-card-body::before {
-            left: 100%;
-          }
-
-          .process-card:hover .process-card-body {
-            transform: translateY(-15px) scale(1.03);
+          .compact-process-card:hover {
+            transform: translateY(-4px);
             background: rgba(30, 58, 95, 0.9);
-            box-shadow: 
-              0 25px 50px rgba(30, 58, 95, 0.4),
-              0 0 30px rgba(100, 181, 246, 0.2);
+            box-shadow: 0 12px 25px rgba(30, 58, 95, 0.3);
             border-color: rgba(100, 181, 246, 0.3);
           }
 
-          .process-card-label {
+          .compact-process-label {
             background: linear-gradient(135deg, #f8dcbf 0%, #e8ccaf 50%, #d8bcaf 100%);
             color: #1e3a5f;
-            padding: 18px 30px;
-            border-radius: 30px;
-            font-size: 1.1em;
+            padding: 8px 16px;
+            border-radius: 15px;
+            font-size: 0.85rem;
             font-weight: 700;
-            text-align: center;
-            margin-bottom: 15px;
             font-family: 'Tenor Sans', serif;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            line-height: 1.3;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
           }
 
-          .process-card-label::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.5s ease;
+          .compact-process-title {
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.2;
           }
 
-          .process-card:hover .process-card-label::before {
-            left: 100%;
-          }
-
-          .process-card:hover .process-card-label {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            background: linear-gradient(135deg, #ffecd2 0%, #f8dcbf 50%, #e8ccaf 100%);
-          }
-
-          @media (max-width: 1024px) {
-            .process-card-body {
-              width: 280px;
-              height: 140px;
-            }
-          }
-
-          @media (max-width: 768px) {
-            .process-card-body {
-              width: 300px;
-              height: 120px;
-              padding: 20px;
-            }
-
-            .process-card-label {
-              font-size: 1rem;
-              padding: 15px 25px;
-            }
-          }
-        `}} />
-        <div className="max-w-[1200px] mx-auto px-6 md:px-8 relative z-10">
-          
-
-
-          {/* Process Steps */}
-          <div className="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-8 mb-16">
-            
-            {/* Step 1 */}
-            <div className="flex flex-col items-center text-center max-w-sm process-card" data-type="step1">
-              <div className="process-card-body">
-                <div className="process-card-label">
-                  Rechtliche Prüfung & Einrichtung bAV
-                </div>
-              </div>
-              <h4 className="text-xl font-semibold text-white mb-4 font-heading border-b-2 border-white pb-2 mt-6">
-                Wir geben Sicherheit
-              </h4>
-              <p className="text-acencia-blue text-sm leading-relaxed">
-                Individuelle Vorsorgelösungen für Unternehmen und Mitarbeitende – rechtssicher, unabhängig und mit innovativen Optionen.
-              </p>
-            </div>
-
-            {/* Arrow 1 */}
-            <div className="hidden lg:block transform rotate-0 lg:rotate-0">
-              <div className="w-12 h-8 bg-gradient-to-r from-orange-300 to-orange-400" style={{ clipPath: 'polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%, 25% 50%)' }}></div>
-            </div>
-
-            {/* Step 2 */}
-            <div className="flex flex-col items-center text-center max-w-sm process-card" data-type="step2">
-              <div className="process-card-body">
-                <div className="process-card-label">
-                  Digitale bAV-Verwaltung & laufender Support
-                </div>
-              </div>
-              <h4 className="text-xl font-semibold text-white mb-4 font-heading border-b-2 border-white pb-2 mt-6">
-                Wir erleichtern den Alltag
-              </h4>
-              <p className="text-acencia-blue text-sm leading-relaxed">
-                Digitale und automatisierte bAV-Verwaltung – ob neu oder bestehend, mit persönlichem Support im Hintergrund.
-              </p>
-            </div>
-
-            {/* Arrow 2 */}
-            <div className="hidden lg:block transform rotate-0 lg:rotate-0">
-              <div className="w-12 h-8 bg-gradient-to-r from-orange-300 to-orange-400" style={{ clipPath: 'polygon(0 0, 75% 0, 100% 50%, 75% 100%, 0 100%, 25% 50%)' }}></div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="flex flex-col items-center text-center max-w-sm process-card" data-type="step3">
-              <div className="process-card-body">
-                <div className="process-card-label">
-                  Mitarbeiterkommunikation & (digitale) Beratung
-                </div>
-              </div>
-              <h4 className="text-xl font-semibold text-white mb-4 font-heading border-b-2 border-white pb-2 mt-6">
-                Wir begeistern Ihre Mitarbeitenden
-              </h4>
-              <p className="text-acencia-blue text-sm leading-relaxed">
-                Moderne bAV-Kommunikation für Mitarbeitende – inklusive individueller Beratung, digital oder vor Ort.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* Comparison Section - Always Expanded */}
-      <section className="bg-acencia py-16 md:py-20">
-        <style dangerouslySetInnerHTML={{ __html: `
-          .comparison-card {
+          .compact-comparison-card {
             background: rgba(30, 58, 95, 0.85);
             backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 30px;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 20px;
+            padding: 24px;
+            transition: all 0.3s ease;
           }
 
-          .comparison-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.6s ease;
-          }
-
-          .comparison-card:hover::before {
-            left: 100%;
-          }
-
-          .comparison-card:hover {
+          .compact-comparison-card:hover {
             background: rgba(30, 58, 95, 0.9);
-            box-shadow: 
-              0 25px 50px rgba(30, 58, 95, 0.4),
-              0 0 30px rgba(100, 181, 246, 0.2);
+            box-shadow: 0 15px 30px rgba(30, 58, 95, 0.3);
             border-color: rgba(100, 181, 246, 0.3);
           }
 
-          .comparison-content {
-            padding: 40px;
-          }
-
-          .challenge-item, .solution-item {
+          .compact-benefit-item {
             display: flex;
             align-items: start;
-            space-x: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
           }
 
-          .challenge-icon, .solution-icon {
-            width: 20px;
-            height: 20px;
-            margin-top: 2px;
+          .compact-benefit-icon {
+            width: 16px;
+            height: 16px;
+            margin-top: 1px;
+            margin-right: 8px;
             flex-shrink: 0;
-            margin-right: 12px;
           }
 
-          .challenge-icon {
+          .compact-challenge-icon {
             color: #ef4444;
           }
 
-          .solution-icon {
+          .compact-solution-icon {
             color: #10b981;
           }
 
@@ -606,12 +431,18 @@ const DieBavPage = () => {
           }
 
           @media (max-width: 768px) {
-            .comparison-content {
-              padding: 24px;
+            .compact-process-card {
+              height: 120px;
+              padding: 12px;
             }
             
-            .challenge-item, .solution-item {
-              margin-bottom: 16px;
+            .compact-process-label {
+              font-size: 0.8rem;
+              padding: 6px 12px;
+            }
+            
+            .compact-comparison-card {
+              padding: 20px;
             }
 
             .onboarding-card {
@@ -623,50 +454,90 @@ const DieBavPage = () => {
             }
           }
         `}} />
+        
         <div className="max-w-[1200px] mx-auto px-6 md:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6 tracking-tight leading-tight font-heading">
-              Der ACENCIA-Vorteil auf einen Blick
-            </h2>
-            <p className="text-lg text-acencia-blue max-w-2xl mx-auto leading-relaxed">
-              Sehen Sie selbst, wie ACENCIA Ihre bAV-Verwaltung revolutioniert
-            </p>
+          
+          {/* Compact Process Steps */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="compact-process-card">
+              <div className="compact-process-label">Rechtliche Prüfung</div>
+              <div className="compact-process-title">Wir geben Sicherheit</div>
+              <p className="text-acencia-blue text-xs">Rechtssichere, individuelle Vorsorgelösungen</p>
+            </div>
+            
+            <div className="compact-process-card">
+              <div className="compact-process-label">Digitale Verwaltung</div>
+              <div className="compact-process-title">Wir erleichtern den Alltag</div>
+              <p className="text-acencia-blue text-xs">Automatisierte Prozesse mit persönlichem Support</p>
+            </div>
+            
+            <div className="compact-process-card">
+              <div className="compact-process-label">Mitarbeiterkommunikation</div>
+              <div className="compact-process-title">Wir begeistern Ihre Teams</div>
+              <p className="text-acencia-blue text-xs">Moderne Beratung, digital oder vor Ort</p>
+            </div>
           </div>
 
-          {/* Always Expanded Comparison Card */}
-          <div className="max-w-5xl mx-auto">
-            <div className="comparison-card">
-              <div className="comparison-content">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                  {/* Without ACENCIA */}
-                  <div>
-                    <h3 className="text-xl font-semibold text-red-400 mb-6 font-heading">❌ Ohne ACENCIA</h3>
-                    <div className="space-y-4">
-                      {withoutAcencia.map((item, index) => (
-                        <div key={index} className="challenge-item">
-                          <AlertTriangle className="challenge-icon" />
-                          <div>
-                            <h4 className="font-medium text-white font-heading">{item.title}</h4>
-                            <p className="text-acencia-blue text-sm">{item.description}</p>
-                          </div>
-                        </div>
-                      ))}
+          {/* Compact Comparison */}
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-semibold text-white mb-3 font-heading">
+              Der ACENCIA-Vorteil
+            </h2>
+          </div>
+
+          <div className="compact-comparison-card">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Without ACENCIA */}
+              <div>
+                <h3 className="text-lg font-semibold text-red-400 mb-4 font-heading">❌ Ohne ACENCIA</h3>
+                <div className="space-y-3">
+                  <div className="compact-benefit-item">
+                    <AlertTriangle className="compact-benefit-icon compact-challenge-icon" />
+                    <div>
+                      <h4 className="font-medium text-white text-sm">Manuelle bAV-Verwaltung</h4>
+                      <p className="text-acencia-blue text-xs">Zeitaufwändige Papierarbeit</p>
                     </div>
                   </div>
+                  <div className="compact-benefit-item">
+                    <AlertTriangle className="compact-benefit-icon compact-challenge-icon" />
+                    <div>
+                      <h4 className="font-medium text-white text-sm">HR-Überlastung</h4>
+                      <p className="text-acencia-blue text-xs">Repetitive Verwaltungsaufgaben</p>
+                    </div>
+                  </div>
+                  <div className="compact-benefit-item">
+                    <AlertTriangle className="compact-benefit-icon compact-challenge-icon" />
+                    <div>
+                      <h4 className="font-medium text-white text-sm">Compliance-Risiken</h4>
+                      <p className="text-acencia-blue text-xs">Schwierige Arbeitgeberpflichten</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                  {/* With ACENCIA */}
-                  <div>
-                    <h3 className="text-xl font-semibold text-green-400 mb-6 font-heading">✅ Mit ACENCIA</h3>
-                    <div className="space-y-4">
-                      {withAcencia.map((item, index) => (
-                        <div key={index} className="solution-item">
-                          <CheckCircle className="solution-icon" />
-                          <div>
-                            <h4 className="font-medium text-white font-heading">{item.title}</h4>
-                            <p className="text-acencia-blue text-sm">{item.description}</p>
-                          </div>
-                        </div>
-                      ))}
+              {/* With ACENCIA */}
+              <div>
+                <h3 className="text-lg font-semibold text-green-400 mb-4 font-heading">✅ Mit ACENCIA</h3>
+                <div className="space-y-3">
+                  <div className="compact-benefit-item">
+                    <CheckCircle className="compact-benefit-icon compact-solution-icon" />
+                    <div>
+                      <h4 className="font-medium text-white text-sm">Vollautomatisierung</h4>
+                      <p className="text-acencia-blue text-xs">Bis zu 80% Zeitersparnis</p>
+                    </div>
+                  </div>
+                  <div className="compact-benefit-item">
+                    <CheckCircle className="compact-benefit-icon compact-solution-icon" />
+                    <div>
+                      <h4 className="font-medium text-white text-sm">HR-Entlastung</h4>
+                      <p className="text-acencia-blue text-xs">Fokus auf strategische Aufgaben</p>
+                    </div>
+                  </div>
+                  <div className="compact-benefit-item">
+                    <CheckCircle className="compact-benefit-icon compact-solution-icon" />
+                    <div>
+                      <h4 className="font-medium text-white text-sm">Automatische Compliance</h4>
+                      <p className="text-acencia-blue text-xs">Alle Pflichten ohne Aufwand</p>
                     </div>
                   </div>
                 </div>
